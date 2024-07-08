@@ -11,10 +11,11 @@
       <div class="header__logo-container">
         <span>N</span>
       </div>
-    </header>
+    </h1eader>
     <main class="main__container">
       <div class="text__area-container">
         <div class="text__area-item">
+          <span class="notes__block">Texto a encriptar</span>
           <input
             type="text"
             id="input-text"
@@ -22,32 +23,37 @@
           />
         </div>
         <div class="text__area-item">
+          <span class="notes__block">Texto encriptado</span>
           <input type="text" id="output-text" placeholder="..." readonly />
         </div>
-        <div class="button__container">
-          <span class="notes__block"></span>
+      </div>
+      <section class="button__container">
           <div class="button__items">
             <button id="button-encrypt" class="button__enc">Encriptar</button>
             <button id="button-desencrypt" class="button__desenc">
               Desencriptar
             </button>
           </div>
-        </div>
+      </section>
+      <section class="output-text__container">
         <div class="list__container">
-          <textarea class="input-copyable" id="text-list" readonly></textarea>
+          <textarea class="input-copyable" placeholder="Encripta o Desencripta para copiar el texto" id="text-list" readonly></textarea>
         </div>
-      </div>
+        <div class="button__container">
+          <button class="button__copy" id="copybutton">Copiar Texto</button>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="footer__social-container">
         <div class="footer__social-images">
-          <img src="" alt="Linkedin" />
+          <a href="https://www.linkedin.com/in/dilan-garrido-lopez-bab3a413a/" target="_blank" ><img class="logo__images" src="Images/linkedin.png" alt="Linkedin" /></a>
         </div>
         <div>
-          <img src="" alt="GitHub" />
+          <a href="https://github.com/NotProgram" target="_blank"><img class="logo__images" src="Images/github.png" alt="GitHub" /></a>
         </div>
         <div>
-          <img src="" alt="X" />
+          <a href="https://x.com/anfangrdlan" target="_blank"><img class="logo__images" src="Images/x.png" alt="X" /></a>
         </div>
       </div>
     </footer>

@@ -32,7 +32,7 @@ document.getElementById('button-desencrypt').addEventListener('click', function(
 
 function encryptText(text) {
     const symbolArray = [
-        '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '[', ']', '{', '}', ';', ':', '"', "'", '<', '>', ',', '.', '?', '/'
+        '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '[', ']', '{', '}', ';', ':', '"', "'", '<', '>', ',', '.', '+', '/'
     ];
 
     let encryptedText = '';
@@ -53,7 +53,7 @@ function encryptText(text) {
 
 function decryptText(encryptedText) {
     const symbolArray = [
-        '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '[', ']', '{', '}', ';', ':', '"', "'", '<', '>', ',', '.', '?', '/'
+        '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '[', ']', '{', '}', ';', ':', '"', "'", '<', '>', ',', '.', '+', '/'
     ];
     let decryptedText = '';
     for (let char of encryptedText) {
@@ -66,3 +66,18 @@ function decryptText(encryptedText) {
     }
     return decryptedText;
 }
+
+function clipboardCopy(texto) {
+    navigator.clipboard.writeText(texto).then(function() {
+        alert('Texto copiado al portapapeles');
+    }).catch(function(err) {
+        alert('Error al copiar texto: ', err);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("copybutton").addEventListener("click", function() {
+        let copyText = document.getElementById('text-list').value;
+        clipboardCopy(copyText);
+    });
+  });
