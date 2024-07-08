@@ -21,8 +21,20 @@
             placeholder="¿En qué estás pensando?"
           />
         </div>
-        <div>
-          <input type="text" readonly />
+        <div class="text__area-item">
+          <input type="text" id="output-text" placeholder="..." readonly />
+        </div>
+        <div class="button__container">
+          <span class="notes__block"></span>
+          <div class="button__items">
+            <button id="button-encrypt" class="button__enc">Encriptar</button>
+            <button id="button-desencrypt" class="button__desenc">
+              Desencriptar
+            </button>
+          </div>
+        </div>
+        <div class="list__container">
+          <textarea class="input-copyable" id="text-list" readonly></textarea>
         </div>
       </div>
     </main>
@@ -39,5 +51,6 @@
         </div>
       </div>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>
