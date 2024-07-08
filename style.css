@@ -27,6 +27,7 @@ html, body {
   color: aliceblue;
   background-color: var(--primary-color);
   gap: 2rem;
+  margin-top: 160px;
 }
 
 
